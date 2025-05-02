@@ -21,6 +21,9 @@ export default {
   ios: {
     bundleIdentifier: PUBLIC_ENV.BUNDLE_IDENTIFIER,
     associatedDomains: [`applinks:${PUBLIC_ENV.APP_URL}`],
+    infoPlist: {
+      ITSAppUsesNonExemptEncryption: false,
+    },
   },
   android: {
     intentFilters: [
@@ -51,4 +54,9 @@ export default {
       },
     ],
   ],
+  extra: {
+    eas: {
+      projectId: 'd0b5c19f-91a1-4297-ae1a-01f6ee8adb03',
+    },
+  },
 } satisfies ExpoConfig
